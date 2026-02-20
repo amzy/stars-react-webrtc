@@ -14,7 +14,7 @@
 #import <WebRTC/RTCPeerConnection.h>
 #import <CoreMedia/CoreMedia.h>
 #import "PIPController.h"
-#import <WebRTC/RTCI420Buffer.h>
+@class RTCI420Buffer;
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol JitsiCameraVideoCapturerDataSource <NSObject>
@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, nullable, weak)id<JitsiCameraVideoCapturerDataSource> cameraVideoCapturerSource;
 @property(nonatomic, nullable, weak) id<RTCPeerConnectionDelegate> peerConnectionDelegate;
 +(instancetype _Nonnull)shared;
++(CVPixelBufferRef)pixelBufferFromI420:(RTCI420Buffer *)i420Buffer;
 
 @end
 
