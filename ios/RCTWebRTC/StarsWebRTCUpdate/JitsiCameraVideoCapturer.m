@@ -23,13 +23,9 @@
 #import "AVCaptureSession_Jitsi.h"
 
 const int64_t kNanosecondsPerSecond = 1000000000;
-//static inline BOOL IsMediaSubTypeSupported(FourCharCode mediaSubType) {
-//    return (mediaSubType == kCVPixelFormatType_420YpCbCr8PlanarFullRange ||
-//            mediaSubType == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange);
-//}
-
 static inline BOOL IsMediaSubTypeSupported(FourCharCode mediaSubType) {
-    return (mediaSubType == kCVPixelFormatType_32BGRA);
+    return (mediaSubType == kCVPixelFormatType_420YpCbCr8PlanarFullRange ||
+            mediaSubType == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange || mediaSubType == kCVPixelFormatType_32BGRA);
 }
 
 @interface JitsiCameraVideoCapturer ()<AVCaptureVideoDataOutputSampleBufferDelegate>
@@ -578,6 +574,7 @@ __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
         (id)kCVPixelBufferWidthKey : @(dimensions.width),
         (id)kCVPixelBufferHeightKey : @(dimensions.height),
         (id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA),
+        //(id)kCVPixelBufferPixelFormatTypeKey : @(_outputPixelFormat),
     };
 }
 
