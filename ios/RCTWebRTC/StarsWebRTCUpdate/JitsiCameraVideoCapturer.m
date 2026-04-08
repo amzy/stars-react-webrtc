@@ -576,7 +576,7 @@ __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
     _videoDataOutput.videoSettings = @{
         (id)kCVPixelBufferWidthKey : @(dimensions.width),
         (id)kCVPixelBufferHeightKey : @(dimensions.height),
-        (id)kCVPixelBufferPixelFormatTypeKey : @(_outputPixelFormat),
+        (id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA),
     };
 }
 
