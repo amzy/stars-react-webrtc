@@ -308,14 +308,15 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
                                                              rotation:rotation
                                                           timeStampNs:timeStampNs];
     
+    [[JitsiCaptureInjector shared].cameraVideoCapturerSource sampleBufferCaptured:sampleBuffer orientation:rotation];
+    
     RTCVideoFrame *videoFrame2 = [[[JitsiCaptureInjector shared] cameraVideoCapturerSource] processframeCaptured:videoFrame];
     
     if(videoFrame2 != nil) {
         [self.delegate capturer:self didCaptureVideoFrame:videoFrame2];
-    }else {
-        [self.delegate capturer:self didCaptureVideoFrame:videoFrame];
     }
 }
+
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
   didDropSampleBuffer:(CMSampleBufferRef)sampleBuffer
        fromConnection:(AVCaptureConnection *)connection {

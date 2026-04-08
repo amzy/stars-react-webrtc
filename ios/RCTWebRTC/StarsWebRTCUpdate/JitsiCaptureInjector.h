@@ -18,6 +18,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol JitsiCameraVideoCapturerDataSource <NSObject>
+-(void)sampleBufferCaptured:(CMSampleBufferRef)sampleBuffer orientation:(RTCVideoRotation)rotation;
 -(RTCVideoFrame *)processframeCaptured:(RTCVideoFrame *)videoFrame;
 -(JitsiCameraVideoCapturer *_Nullable)videoCapturerFrom:(RTCVideoSource *)videoSource;
 -(void)localCameraDidStartTrack:(RTCVideoTrack *)videoTrack;
