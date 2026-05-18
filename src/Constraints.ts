@@ -6,6 +6,13 @@ export type MediaTrackConstraints = {
     facingMode?: ConstrainString;
     deviceId?: ConstrainString;
     groupId?: ConstrainString;
+    source?: ConstrainString;
+    deepARLicenseKey?: ConstrainString;
+    deepAR?: {
+        licenseKey?: string;
+        lensFacing?: 'front' | 'back' | 'user' | 'environment';
+        effectPath?: string;
+    };
 }
 
 type ConstrainNumber = number | {
