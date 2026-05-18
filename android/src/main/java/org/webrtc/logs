@@ -1,0 +1,14 @@
+DeepAR initialized callback received
+2026-05-16 22:24:35.473 13475-13475 DeepARVideoCapturer     org.jitsi.meet.debug                 D  DeepAR initialized callback received.
+2026-05-16 22:24:35.473 13475-13475 DeepARZoom              org.jitsi.meet.debug                 D  deepar-initialized-state target=640x360 appliedRender=640x360 captureSessionId=1 capturing=true
+2026-05-16 22:24:35.473 13475-13475 ASHISH                  org.jitsi.meet.debug                 D  Switching effect to: file:///data/user/0/org.jitsi.meet.debug/files/assets/Hope.deepar
+2026-05-16 22:24:35.474 13475-13475 DeepARVideoCapturer     org.jitsi.meet.debug                 D  Switching effect to: file:///data/user/0/org.jitsi.meet.debug/files/assets/Hope.deepar
+2026-05-16 22:24:35.474 13475-14677 UseCaseAttachState      org.jitsi.meet.debug                 D  All use case: [androidx.camera.core.ImageAnalysis-87718a8c-ef3d-4711-8b9e-d862ed649cd7228333670] for camera: 1
+2026-05-16 22:24:35.474 13475-13475 ASHISH                  org.jitsi.meet.debug                 D  runOnFrameThreadBlocking(switch effect) called. handler=Handler (android.os.Handler) {d8f72d4} looper=Looper (DeepARFrameThread, tid 9429) {f08ac7d} currentLooper=Looper (main, tid 2) {edb772}
+2026-05-16 22:24:35.474 13475-13475 ASHISH                  org.jitsi.meet.debug                 D  runOnFrameThreadBlocking(switch effect) posted=true
+2026-05-16 22:24:35.474 13475-14630 ASHISH                  org.jitsi.meet.debug                 D  runOnFrameThreadBlocking(switch effect) Runnable started on thread: DeepARFrameThread
+2026-05-16 22:24:35.474 13475-14630 DeepARZoom              org.jitsi.meet.debug                 D  switch-effect-state-before effectPath=file:///data/user/0/org.jitsi.meet.debug/files/assets/Hope.deepar target=640x360 appliedRender=640x360 lastInput=0x0 inputRotation=0 capturing=true
+2026-05-16 22:24:35.474 13475-14630 ASHISH                  org.jitsi.meet.debug                 D  switchEffectInternal: About to apply effectPath=file:///data/user/0/org.jitsi.meet.debug/files/assets/Hope.deepar
+2026-05-16 22:24:35.474 13475-14677 UseCaseAttachState      org.jitsi.meet.debug                 D  Active and attached use case: [androidx.camera.core.ImageAnalysis-87718a8c-ef3d-4711-8b9e-d862ed649cd7228333670] for camera: 1
+2026-05-16 22:24:35.475 13475-14630 ASHISH                  org.jitsi.meet.debug                 D  switchEffectInternal: Applied effectPath=file:///data/user/0/org.jitsi.meet.debug/files/assets/Hope.deepar, duration=1ms
+2026-05-16 22:24:35.476 13475-14630 ASHISH                  org.jitsi.meet.debug                 D  scheduleOffscreenRenderingReset queued reason=effect-switch session=1 generation=1 delayMs=50
