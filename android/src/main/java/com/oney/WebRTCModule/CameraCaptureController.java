@@ -25,6 +25,71 @@ import java.util.List;
 import java.util.Objects;
 
 public class CameraCaptureController extends AbstractVideoCaptureController {
+    private static final String ASHISH = "ASHISH";
+        // --- Logging for aspect/zoom/crop ---
+        private static double safeAspect(int width, int height) {
+            if (width <= 0 || height <= 0) {
+                return 0.0;
+            }
+            return (double) width / (double) height;
+        }
+
+        private static void logZoomEstimate(
+                String stage,
+                int inputWidth,
+                int inputHeight,
+                int renderWidth,
+                int renderHeight,
+                int rotation,
+                int rowStride,
+                int outputRowStride,
+                boolean mirror,
+                int frameNumber) {
+            if (inputWidth <= 0 || inputHeight <= 0 || renderWidth <= 0 || renderHeight <= 0) {
+                return;
+            }
+
+            double sx = (double) renderWidth / (double) inputWidth;
+            double sy = (double) renderHeight / (double) inputHeight;
+            double scale = Math.max(sx, sy);
+            double usedInputWidth = renderWidth / scale;
+            double usedInputHeight = renderHeight / scale;
+            double cropWidthPercent = Math.max(0.0, (1.0 - (usedInputWidth / inputWidth)) * 100.0);
+            double cropHeightPercent = Math.max(0.0, (1.0 - (usedInputHeight / inputHeight)) * 100.0);
+
+            Log.d(
+                    ASHISH,
+                    stage
+                            + " frame#=" + frameNumber
+                            + " in=" + inputWidth + "x" + inputHeight
+                            + " render=" + renderWidth + "x" + renderHeight
+                            + " inAspect=" + safeAspect(inputWidth, inputHeight)
+                            + " renderAspect=" + safeAspect(renderWidth, renderHeight)
+                            + " estCropW%=" + cropWidthPercent
+                            + " estCropH%=" + cropHeightPercent
+                            + " rotation=" + rotation
+                            + " mirror=" + mirror
+                            + " rowStride=" + rowStride
+                            + " outputRowStride=" + outputRowStride);
+        }
+
+        private int normalCameraFrameCount = 0;
+        private void logNormalCameraFrame(int inputWidth, int inputHeight, int renderWidth, int renderHeight, int rotation, int rowStride, int outputRowStride, boolean mirror) {
+            normalCameraFrameCount++;
+            if (normalCameraFrameCount % 60 == 1) {
+                logZoomEstimate(
+                    "camera->normal",
+                    inputWidth,
+                    inputHeight,
+                    renderWidth,
+                    renderHeight,
+                    rotation,
+                    rowStride,
+                    outputRowStride,
+                    mirror,
+                    normalCameraFrameCount);
+            }
+        }
     /**
      * The {@link Log} tag with which {@code CameraCaptureController} is to log.
      */
@@ -62,6 +127,8 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
         this.context = context;
         this.cameraEnumerator = cameraEnumerator;
         this.constraints = constraints;
+        Log.d(ASHISH, "CameraCaptureController constructed with width=" + targetWidth + ", height=" + targetHeight + ", fps=" + targetFps);
+        logZoomEstimate("normal-target:init", targetWidth, targetHeight, targetWidth, targetHeight, 0, -1, -1, false, 0);
     }
 
     @Nullable
@@ -100,6 +167,8 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
             this.targetWidth = constraints.getInt("width");
             this.targetHeight = constraints.getInt("height");
             this.targetFps = constraints.getInt("frameRate");
+            Log.d(ASHISH, "applyConstraints: width=" + targetWidth + ", height=" + targetHeight + ", fps=" + targetFps);
+            logZoomEstimate("ASHISHnormal-target:applyConstraints", targetWidth, targetHeight, targetWidth, targetHeight, 0, -1, -1, false, 0);
         };
 
         if (videoCapturer == null) {
@@ -201,11 +270,14 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
         String deviceId = ReactBridgeUtil.getMapStrValue(this.constraints, "deviceId");
         String facingMode = ReactBridgeUtil.getMapStrValue(this.constraints, "facingMode");
 
+        Log.d(ASHISH, "createVideoCapturer called with deviceId=" + deviceId + ", facingMode=" + facingMode);
         CreateCapturerResult result = createVideoCapturer(deviceId, facingMode);
         if (result == null) {
+            Log.e(ASHISH, "createVideoCapturer: No suitable camera found");
             return null;
         }
 
+        Log.d(ASHISH, "createVideoCapturer: Camera selected: " + result.cameraName + " (index=" + result.cameraIndex + ")");
         updateActualSize(result.cameraIndex, result.cameraName, result.videoCapturer);
 
         return result.videoCapturer;
@@ -224,6 +296,23 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
         if (actualSize != null) {
             actualWidth = actualSize.width;
             actualHeight = actualSize.height;
+            logZoomEstimate(
+                "normal-config:requested-vs-actual",
+                actualWidth,
+                actualHeight,
+                targetWidth,
+                targetHeight,
+                0,
+                -1,
+                -1,
+                false,
+                0);
+            Log.d(
+                ASHISH,
+                "normal camera requested=" + targetWidth + "x" + targetHeight
+                    + " actual=" + actualWidth + "x" + actualHeight
+                    + " reqAspect=" + safeAspect(targetWidth, targetHeight)
+                    + " actualAspect=" + safeAspect(actualWidth, actualHeight));
         }
     }
 
@@ -251,6 +340,7 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
             cameraIndex = Integer.parseInt(deviceId);
             cameraName = deviceNames[cameraIndex];
         } catch (Exception e) {
+            Log.d(ASHISH, "createVideoCapturer: failed to find device with id: " + deviceId);
             Log.d(TAG, "failed to find device with id: " + deviceId);
         }
 
@@ -259,12 +349,14 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
             VideoCapturer videoCapturer = cameraEnumerator.createCapturer(cameraName, cameraEventsHandler);
             String message = "Create user-specified camera " + cameraName;
             if (videoCapturer != null) {
+                Log.d(ASHISH, message + " succeeded");
                 Log.d(TAG, message + " succeeded");
                 this.isFrontFacing = cameraEnumerator.isFrontFacing(cameraName);
                 this.currentDeviceId = String.valueOf(cameraIndex);
                 return new CreateCapturerResult(cameraIndex, cameraName, videoCapturer);
             } else {
                 // fallback to facingMode
+                Log.d(ASHISH, message + " failed");
                 Log.d(TAG, message + " failed");
                 failedDevices.add(cameraName);
             }
@@ -284,11 +376,13 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
             VideoCapturer videoCapturer = cameraEnumerator.createCapturer(name, cameraEventsHandler);
             String message = "Create camera " + name;
             if (videoCapturer != null) {
+                Log.d(ASHISH, message + " succeeded");
                 Log.d(TAG, message + " succeeded");
                 this.isFrontFacing = cameraEnumerator.isFrontFacing(name);
                 this.currentDeviceId = String.valueOf(cameraIndex);
                 return new CreateCapturerResult(cameraIndex, name, videoCapturer);
             } else {
+                Log.d(ASHISH, message + " failed");
                 Log.d(TAG, message + " failed");
                 failedDevices.add(name);
             }
@@ -302,11 +396,13 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
                 VideoCapturer videoCapturer = cameraEnumerator.createCapturer(name, cameraEventsHandler);
                 String message = "Create fallback camera " + name;
                 if (videoCapturer != null) {
+                    Log.d(ASHISH, message + " succeeded");
                     Log.d(TAG, message + " succeeded");
                     this.isFrontFacing = cameraEnumerator.isFrontFacing(name);
                     this.currentDeviceId = String.valueOf(cameraIndex);
                     return new CreateCapturerResult(cameraIndex, name, videoCapturer);
                 } else {
+                    Log.d(ASHISH, message + " failed");
                     Log.d(TAG, message + " failed");
                     failedDevices.add(name);
                 }
@@ -314,6 +410,7 @@ public class CameraCaptureController extends AbstractVideoCaptureController {
         }
 
         currentDeviceId = null;
+        Log.w(ASHISH, "Unable to identify a suitable camera.");
         Log.w(TAG, "Unable to identify a suitable camera.");
 
         return null;
