@@ -1,0 +1,217 @@
+2026-04-24 20:40:04.951 15730-15730 DeepARZoom              com.mynewapp                         D  deepar->output frame#=121 in=640x480 render=640x480 inAspect=1.3333333333333333 renderAspect=1.3333333333333333 estCropW%=0.0 estCropH%=0.0 rotation=270 mirror=true inRowStride=-1 deepARRowStride=-1
+2026-04-24 20:40:05.121 15730-16630 DeepARZoom              com.mynewapp                         D  camera->deepar frame#=61 in=640x480 render=640x480 inAspect=1.3333333333333333 renderAspect=1.3333333333333333 estCropW%=0.0 estCropH%=0.0 rotation=270 mirror=false inRowStride=2560 deepARRowStride=2560
+2026-04-24 20:40:05.468 15730-15807 ASHISH                  com.mynewapp                         D  switchEffect called with effectPath=file:///android_asset/effects/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.468 15730-15807 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) called. handler=Handler (android.os.Handler) {46fd7bc} looper=Looper (DeepARFrameThread, tid 3601) {ec25345} currentLooper=Looper (mqt_native_modules, tid 3585) {59ea625}
+2026-04-24 20:40:05.468 15730-15807 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) posted=true
+2026-04-24 20:40:05.469 15730-16630 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) Runnable started on thread: DeepARFrameThread
+2026-04-24 20:40:05.469 15730-16630 ASHISH                  com.mynewapp                         D  switchEffectInternal: About to apply effectPath=file:///android_asset/effects/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.469 15730-16630 ASHISH                  com.mynewapp                         D  switchEffectInternal: Applied effectPath=file:///android_asset/effects/Neon_Devil_Horns.deepar, duration=0ms
+2026-04-24 20:40:05.469 15730-16630 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) Runnable finished
+2026-04-24 20:40:05.469 15730-15807 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) latch completed=true
+2026-04-24 20:40:05.469 15730-15807 ASHISH                  com.mynewapp                         D  switchEffect finished for effectPath=file:///android_asset/effects/Neon_Devil_Horns.deepar, duration=1ms, result=true
+2026-04-24 20:40:05.483 15730-15894 ASHISH                  com.mynewapp                         D  stopCapture called
+2026-04-24 20:40:05.483 15730-15894 ASHISH                  com.mynewapp                         D  unbindCamera called
+2026-04-24 20:40:05.483 15730-15894 ASHISH                  com.mynewapp                         D  Camera invocation: unbindCamera entry
+2026-04-24 20:40:05.502 15730-15730 DeferrableSurface       com.mynewapp                         D  surface closed,  useCount=1 closed=true androidx.camera.core.impl.ImmediateSurface@bb49be6
+2026-04-24 20:40:05.502 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Use cases [androidx.camera.core.ImageAnalysis-83296d99-e97c-4cc5-9fa1-3e58b165fde819540284] now DETACHED for camera
+2026-04-24 20:40:05.502 15730-15894 ASHISH                  com.mynewapp                         D  cameraProvider unbound in unbindCamera
+2026-04-24 20:40:05.502 15730-15894 ASHISH                  com.mynewapp                         D  Camera invocation: cameraProvider unbound in unbindCamera
+2026-04-24 20:40:05.502 15730-15894 ASHISH                  com.mynewapp                         D  releaseDeepAR called
+2026-04-24 20:40:05.502 15730-16713 UseCaseAttachState      com.mynewapp                         D  All use case: [] for camera: 1
+2026-04-24 20:40:05.503 15730-15894 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(release DeepAR) called. handler=Handler (android.os.Handler) {46fd7bc} looper=Looper (DeepARFrameThread, tid 3601) {ec25345} currentLooper=null
+2026-04-24 20:40:05.503 15730-15894 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(release DeepAR) posted=true
+2026-04-24 20:40:05.503 15730-16630 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(release DeepAR) Runnable started on thread: DeepARFrameThread
+2026-04-24 20:40:05.503 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Resetting Capture Session
+2026-04-24 20:40:05.503 15730-16630 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: About to release DeepAR
+2026-04-24 20:40:05.506 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Releasing session in state OPENED
+2026-04-24 20:40:05.506 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [] for camera: 1
+2026-04-24 20:40:05.506 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [] for camera: 1
+2026-04-24 20:40:05.507 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Closing camera.
+2026-04-24 20:40:05.507 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Transitioning camera internal state: OPENED --> CLOSING
+2026-04-24 20:40:05.507 15730-16713 CameraStateRegistry     com.mynewapp                         D  Recalculating open cameras:
+                                                                                                    Camera                                       State                 
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Camera@d116286[id=1]                         CLOSING               
+                                                                                                    Camera@291ad4f[id=0]                         UNKNOWN               
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Open count: 1 (Max allowed: 1)
+2026-04-24 20:40:05.507 15730-16713 CameraStateMachine      com.mynewapp                         D  New public camera state CameraState{type=CLOSING, error=null} from CLOSING and null
+2026-04-24 20:40:05.507 15730-16713 CameraStateMachine      com.mynewapp                         D  Publishing new public camera state CameraState{type=CLOSING, error=null}
+2026-04-24 20:40:05.507 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Resetting Capture Session
+2026-04-24 20:40:05.507 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Releasing session in state CLOSING
+2026-04-24 20:40:05.508 15730-16713 CaptureSession          com.mynewapp                         D  onSessionFinished()
+2026-04-24 20:40:05.558 15730-16699 Surface                 com.mynewapp                         D  Surface::disconnect
+2026-04-24 20:40:05.558 15730-16699 BufferQueueProducer     com.mynewapp                         D  [ImageReader-640x480f1m2-15730-0](id:3d7200000005,api:1,p:15730,c:15730) disconnect: api 1
+2026-04-24 20:40:05.560 15730-16630 libEGL                  com.mynewapp                         E  eglDestroySurfaceImpl:862 error 300d (EGL_BAD_SURFACE)
+2026-04-24 20:40:05.561 15730-16630 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: DeepAR released
+2026-04-24 20:40:05.561 15730-16630 ASHISH                  com.mynewapp                         D  DeepAR released in releaseDeepAR
+2026-04-24 20:40:05.561 15730-16630 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(release DeepAR) Runnable finished
+2026-04-24 20:40:05.561 15730-15894 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(release DeepAR) latch completed=true
+2026-04-24 20:40:05.561 15730-15894 ASHISH                  com.mynewapp                         D  getUserMedia called with constraints: {"video":{"source":"deepar","facingMode":"user","height":720,"frameRate":30,"width":1280,"deepAR":{"effectPath":"Neon_Devil_Horns.deepar","lensFacing":"front","licenseKey":"b40d07522b8976d959e1ac9bc137a77f67a422aa77d6078efc67249e6f1db63976c2442c340d591c"}}}
+2026-04-24 20:40:05.561 15730-15894 ASHISH                  com.mynewapp                         D  getUserMedia(video): {"deepAR":{"licenseKey":"b40d07522b8976d959e1ac9bc137a77f67a422aa77d6078efc67249e6f1db63976c2442c340d591c","lensFacing":"front","effectPath":"Neon_Devil_Horns.deepar"},"width":1280,"frameRate":30,"height":720,"facingMode":"user","source":"deepar"}
+2026-04-24 20:40:05.561 15730-15894 com.oney.W...bRTCModule com.mynewapp                         D  getUserMedia(video): {"deepAR":{"licenseKey":"b40d07522b8976d959e1ac9bc137a77f67a422aa77d6078efc67249e6f1db63976c2442c340d591c","lensFacing":"front","effectPath":"Neon_Devil_Horns.deepar"},"width":1280,"frameRate":30,"height":720,"facingMode":"user","source":"deepar"}
+2026-04-24 20:40:05.561 15730-15894 ASHISH                  com.mynewapp                         D  isDeepARSource called with: {"deepAR":{"licenseKey":"b40d07522b8976d959e1ac9bc137a77f67a422aa77d6078efc67249e6f1db63976c2442c340d591c","lensFacing":"front","effectPath":"Neon_Devil_Horns.deepar"},"width":1280,"frameRate":30,"height":720,"facingMode":"user","source":"deepar"}
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  isDeepARSource: source field is 'deepar'
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  isDeepARSource: Matched source='deepar', returning true
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  Using DeepARVideoCaptureController
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  DeepAR effective capture config width=640 height=480 fps=15
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  Resolved DeepAR effectPath: file:///android_asset/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  Creating video track with selected controller
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  DeepARVideoCapturer constructor called
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  DeepARVideoCapturer initialized with width=640, height=480, fps=15
+2026-04-24 20:40:05.562 15730-15894 ASHISH                  com.mynewapp                         D  setCapturerEventsListener called
+2026-04-24 20:40:05.563 15730-17101 org.webrtc.Logging      com.mynewapp                         I  EglBase14Impl: Using OpenGL ES version 2
+2026-04-24 20:40:05.565 15730-15894 ASHISH                  com.mynewapp                         D  isScreencast called
+2026-04-24 20:40:05.565 15730-15894 DeepARVideoCapturer     com.mynewapp                         D  initialize() called
+2026-04-24 20:40:05.565 15730-15894 ASHISH                  com.mynewapp                         D  initialize() called
+2026-04-24 20:40:05.565 15730-15894 ASHISH                  com.mynewapp                         D  startCapture called with width=640, height=480, framerate=15
+2026-04-24 20:40:05.566 15730-15894 DeepARVideoCapturer     com.mynewapp                         D  startCapture() w=640 h=480 fps=15
+2026-04-24 20:40:05.566 15730-15894 DeepARZoom              com.mynewapp                         D  startCapture target=640x480 fps=15 targetAspect=1.3333333333333333
+2026-04-24 20:40:05.566 15730-15894 DeepARVideoCapturer     com.mynewapp                         D  License key (first 8): b40d0752...
+2026-04-24 20:40:05.566 15730-15894 DeepARVideoCapturer     com.mynewapp                         D  Effect path: file:///android_asset/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.566 15730-15894 DeepARVideoCapturer     com.mynewapp                         D  Lens facing: front
+2026-04-24 20:40:05.566 15730-15894 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(initialize DeepAR) called. handler=Handler (android.os.Handler) {a178faa} looper=Looper (DeepARFrameThread, tid 4219) {14a279b} currentLooper=null
+2026-04-24 20:40:05.566 15730-15894 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(initialize DeepAR) posted=true
+2026-04-24 20:40:05.566 15730-17103 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(initialize DeepAR) Runnable started on thread: DeepARFrameThread
+2026-04-24 20:40:05.566 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: About to create DeepAR instance
+2026-04-24 20:40:05.566 15730-17103 ASHISH                  com.mynewapp                         D  About to create DeepAR instance
+2026-04-24 20:40:05.567 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: DeepAR instance created
+2026-04-24 20:40:05.567 15730-17103 ASHISH                  com.mynewapp                         D  DeepAR instance created
+2026-04-24 20:40:05.567 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: About to set DeepAR license key
+2026-04-24 20:40:05.567 15730-17103 ASHISH                  com.mynewapp                         D  About to set DeepAR license key
+2026-04-24 20:40:05.567 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: DeepAR license key set
+2026-04-24 20:40:05.567 15730-17103 ASHISH                  com.mynewapp                         D  DeepAR license key set
+2026-04-24 20:40:05.567 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: About to initialize DeepAR
+2026-04-24 20:40:05.567 15730-17103 ASHISH                  com.mynewapp                         D  About to initialize DeepAR
+2026-04-24 20:40:05.567 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: DeepAR initialized
+2026-04-24 20:40:05.567 15730-17103 ASHISH                  com.mynewapp                         D  DeepAR initialized
+2026-04-24 20:40:05.568 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: About to set offscreen rendering
+2026-04-24 20:40:05.568 15730-17103 ASHISH                  com.mynewapp                         D  About to set offscreen rendering
+2026-04-24 20:40:05.569 15730-17103 Looper                  com.mynewapp                         W  Looper already prepared for this thread with a different value for the LOOPER_PREPARE_ALLOW_NON_CALLBACKS option.
+2026-04-24 20:40:05.569 15730-17103 Looper                  com.mynewapp                         E  Invalid attempt to set NULL callback but not allowed for this looper.
+2026-04-24 20:40:05.570 15730-17103 DEEPAR                  com.mynewapp                         D  DeepAR SDK (android) version: v5.6.21
+2026-04-24 20:40:05.581 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  ASHISH: Offscreen rendering set
+2026-04-24 20:40:05.581 15730-17103 ASHISH                  com.mynewapp                         D  Offscreen rendering set
+2026-04-24 20:40:05.581 15730-17103 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(initialize DeepAR) Runnable finished
+2026-04-24 20:40:05.582 15730-15894 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(initialize DeepAR) latch completed=true
+2026-04-24 20:40:05.582 15730-15894 ASHISH                  com.mynewapp                         D  bindCamera called
+2026-04-24 20:40:05.582 15730-15894 ASHISH                  com.mynewapp                         D  Camera invocation: bindCamera entry
+2026-04-24 20:40:05.582 15730-15894 ASHISH                  com.mynewapp                         D  Camera invocation: requested ProcessCameraProvider instance
+2026-04-24 20:40:05.582 15730-15730 ASHISH                  com.mynewapp                         D  cameraProviderFuture listener triggered
+2026-04-24 20:40:05.582 15730-15894 ASHISH                  com.mynewapp                         D  Creating stream with audioTrack=false, videoTrack=true
+2026-04-24 20:40:05.582 15730-15730 ASHISH                  com.mynewapp                         D  Camera invocation: ProcessCameraProvider acquired
+2026-04-24 20:40:05.582 15730-15730 ASHISH                  com.mynewapp                         D  bindImageAnalysis called
+2026-04-24 20:40:05.582 15730-15730 ASHISH                  com.mynewapp                         D  Camera invocation: bindImageAnalysis entry
+2026-04-24 20:40:05.583 15730-15730 ASHISH                  com.mynewapp                         D  Camera invocation: setAnalyzer on ImageAnalysis
+2026-04-24 20:40:05.583 15730-15894 com.oney.W...bRTCModule com.mynewapp                         D  MediaStream id: 60f6348b-4a82-49ea-9da0-172ce2de8f0a
+2026-04-24 20:40:05.583 15730-15894 ASHISH                  com.mynewapp                         D  getUserMedia success, streamId=60f6348b-4a82-49ea-9da0-172ce2de8f0a
+2026-04-24 20:40:05.583 15730-15730 ASHISH                  com.mynewapp                         D  Camera invocation: provider.unbindAll called
+2026-04-24 20:40:05.585 15730-15730 CameraOrientationUtil   com.mynewapp                         D  getRelativeImageRotation: destRotationDegrees=0, sourceRotationDegrees=270, isOppositeFacing=false, result=270
+2026-04-24 20:40:05.585 15730-15730 CameraOrientationUtil   com.mynewapp                         D  getRelativeImageRotation: destRotationDegrees=0, sourceRotationDegrees=270, isOppositeFacing=false, result=270
+2026-04-24 20:40:05.590 15730-15730 CameraOrientationUtil   com.mynewapp                         D  getRelativeImageRotation: destRotationDegrees=0, sourceRotationDegrees=270, isOppositeFacing=false, result=270
+2026-04-24 20:40:05.590 15730-15730 CameraOrientationUtil   com.mynewapp                         D  getRelativeImageRotation: destRotationDegrees=0, sourceRotationDegrees=270, isOppositeFacing=false, result=270
+2026-04-24 20:40:05.591 15730-15730 DeferrableSurface       com.mynewapp                         D  Surface created[total_surfaces=2, used_surfaces=1](androidx.camera.core.impl.ImmediateSurface@8f49ee4}
+2026-04-24 20:40:05.593 15730-15730 ASHISH                  com.mynewapp                         D  Camera invocation: provider.bindToLifecycle called
+2026-04-24 20:40:05.593 15730-15730 DeepARVideoCapturer     com.mynewapp                         D  CameraX bound. lensFacing=0 target=640x480
+2026-04-24 20:40:05.593 15730-15730 ASHISH                  com.mynewapp                         D  CameraX bound in bindImageAnalysis
+2026-04-24 20:40:05.593 15730-15730 ASHISH                  com.mynewapp                         D  Camera provider bound and image analysis set
+2026-04-24 20:40:05.614 15730-17110 Surface                 com.mynewapp                         D  Surface::disconnect
+2026-04-24 20:40:05.614 15730-17110 BufferQueueProducer     com.mynewapp                         D  [ImageReader-640x480f1m2-15730-3](id:3d7200000009,api:1,p:15730,c:15730) disconnect: api 1
+2026-04-24 20:40:05.621 15730-15730 com.oney.W...bRTCModule com.mynewapp                         D  Set stream URL 60f6348b-4a82-49ea-9da0-172ce2de8f0a current: 9c77d243-fe85-41ea-8704-2e466454d6a4
+2026-04-24 20:40:05.624 15730-15730 com.oney.W...bRTCModule com.mynewapp                         D  Got video track for stream URL 60f6348b-4a82-49ea-9da0-172ce2de8f0a -> org.webrtc.VideoTrack@acec550
+2026-04-24 20:40:05.625 15730-15730 org.webrtc.Logging      com.mynewapp                         I  EglRenderer: Releasing.
+2026-04-24 20:40:05.625 15730-16713 BufferQueueProducer     com.mynewapp                         D  [ImageReader-640x480f23m4-15730-1](id:3d7200000006,api:4,p:2449,c:15730) disconnect: api 4
+2026-04-24 20:40:05.626 15730-16714 org.webrtc.Logging      com.mynewapp                         I  GlShader: Deleting shader.
+2026-04-24 20:40:05.626 15730-16714 org.webrtc.Logging      com.mynewapp                         I  EglRenderer: eglBase detach and release.
+2026-04-24 20:40:05.626 15730-16714 Surface                 com.mynewapp                         D  Surface::disconnect
+2026-04-24 20:40:05.626 15730-16714 BufferQueueProducer     com.mynewapp                         D  [aee7163 SurfaceView[com.mynewapp/com.mynewapp.MainActivity](BLAST)#291034(BLAST Consumer)pid:15730](id:3d7200000003,api:1,p:15730,c:15730) disconnect: api 1
+2026-04-24 20:40:05.628 15730-15730 org.webrtc.Logging      com.mynewapp                         I  EglRenderer: Releasing done.
+2026-04-24 20:40:05.629 15730-17119 org.webrtc.Logging      com.mynewapp                         I  EglBase14Impl: Using OpenGL ES version 2
+2026-04-24 20:40:05.630 15730-17110 Surface                 com.mynewapp                         D  Surface::disconnect
+2026-04-24 20:40:05.630 15730-17110 BufferQueueProducer     com.mynewapp                         D  [ImageReader-640x480f1m2-15730-3](id:3d7200000009,api:1,p:15730,c:15730) disconnect: api 1
+2026-04-24 20:40:05.632 15730-15730 org.webrtc.Logging      com.mynewapp                         I  EglRenderer: Initializing EglRenderer
+2026-04-24 20:40:05.632 15730-15730 ASHISH                  com.mynewapp                         D  DeepAR initialized callback received
+2026-04-24 20:40:05.632 15730-15730 DeepARVideoCapturer     com.mynewapp                         D  DeepAR initialized callback received.
+2026-04-24 20:40:05.632 15730-15730 ASHISH                  com.mynewapp                         D  Switching effect to: file:///android_asset/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.632 15730-15730 DeepARVideoCapturer     com.mynewapp                         D  Switching effect to: file:///android_asset/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.632 15730-17119 org.webrtc.Logging      com.mynewapp                         I  EglRenderer: clearSurface
+2026-04-24 20:40:05.632 15730-15730 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) called. handler=Handler (android.os.Handler) {a178faa} looper=Looper (DeepARFrameThread, tid 4219) {14a279b} currentLooper=Looper (main, tid 2) {a7aaa9a}
+2026-04-24 20:40:05.633 15730-15730 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) posted=true
+2026-04-24 20:40:05.633 15730-17103 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) Runnable started on thread: DeepARFrameThread
+2026-04-24 20:40:05.633 15730-17103 ASHISH                  com.mynewapp                         D  switchEffectInternal: About to apply effectPath=file:///android_asset/Neon_Devil_Horns.deepar
+2026-04-24 20:40:05.633 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [] for camera: 1
+2026-04-24 20:40:05.634 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Use case androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166 ACTIVE
+2026-04-24 20:40:05.634 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [] for camera: 1
+2026-04-24 20:40:05.635 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Use cases [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] now ATTACHED
+2026-04-24 20:40:05.635 15730-16713 UseCaseAttachState      com.mynewapp                         D  All use case: [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] for camera: 1
+2026-04-24 20:40:05.635 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] for camera: 1
+2026-04-24 20:40:05.636 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Resetting Capture Session
+2026-04-24 20:40:05.637 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Releasing session in state CLOSING
+2026-04-24 20:40:05.637 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Transitioning camera internal state: CLOSING --> REOPENING
+2026-04-24 20:40:05.637 15730-16713 CameraStateRegistry     com.mynewapp                         D  Recalculating open cameras:
+                                                                                                    Camera                                       State                 
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Camera@d116286[id=1]                         OPENING               
+                                                                                                    Camera@291ad4f[id=0]                         UNKNOWN               
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Open count: 1 (Max allowed: 1)
+2026-04-24 20:40:05.637 15730-16713 CameraStateMachine      com.mynewapp                         D  New public camera state CameraState{type=OPENING, error=null} from OPENING and null
+2026-04-24 20:40:05.638 15730-16713 CameraStateMachine      com.mynewapp                         D  Publishing new public camera state CameraState{type=OPENING, error=null}
+2026-04-24 20:40:05.638 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Use case androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166 ACTIVE
+2026-04-24 20:40:05.638 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] for camera: 1
+2026-04-24 20:40:05.639 15730-16713 DeferrableSurface       com.mynewapp                         D  use count-1,  useCount=0 closed=true androidx.camera.core.impl.ImmediateSurface@bb49be6
+2026-04-24 20:40:05.639 15730-16713 DeferrableSurface       com.mynewapp                         D  Surface no longer in use[total_surfaces=2, used_surfaces=0](androidx.camera.core.impl.ImmediateSurface@bb49be6}
+2026-04-24 20:40:05.639 15730-16713 DeferrableSurface       com.mynewapp                         D  Surface terminated[total_surfaces=1, used_surfaces=0](androidx.camera.core.impl.ImmediateSurface@bb49be6}
+2026-04-24 20:40:05.639 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} CameraDevice.onClosed()
+2026-04-24 20:40:05.639 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Attempting to open the camera.
+2026-04-24 20:40:05.640 15730-16713 CameraStateRegistry     com.mynewapp                         D  tryOpenCamera(Camera@d116286[id=1]) [Available Cameras: 0, Already Open: true (Previous state: OPENING)] --> SUCCESS
+2026-04-24 20:40:05.640 15730-16713 CameraStateRegistry     com.mynewapp                         D  Recalculating open cameras:
+                                                                                                    Camera                                       State                 
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Camera@d116286[id=1]                         OPENING               
+                                                                                                    Camera@291ad4f[id=0]                         UNKNOWN               
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Open count: 1 (Max allowed: 1)
+2026-04-24 20:40:05.640 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Opening camera.
+2026-04-24 20:40:05.640 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Transitioning camera internal state: REOPENING --> OPENING
+2026-04-24 20:40:05.640 15730-16713 CameraStateMachine      com.mynewapp                         D  New public camera state CameraState{type=OPENING, error=null} from OPENING and null
+2026-04-24 20:40:05.640 15730-16713 CameraStateMachine      com.mynewapp                         D  Publishing new public camera state CameraState{type=OPENING, error=null}
+2026-04-24 20:40:05.640 15730-16713 UseCaseAttachState      com.mynewapp                         D  All use case: [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] for camera: 1
+2026-04-24 20:40:05.646 15730-17103 ASHISH                  com.mynewapp                         D  switchEffectInternal: Applied effectPath=file:///android_asset/Neon_Devil_Horns.deepar, duration=13ms
+2026-04-24 20:40:05.646 15730-17103 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) Runnable finished
+2026-04-24 20:40:05.646 15730-15730 ASHISH                  com.mynewapp                         D  runOnFrameThreadBlocking(switch effect) latch completed=true
+2026-04-24 20:40:05.647 15730-15730 Surface                 com.mynewapp                         D  Surface::disconnect
+2026-04-24 20:40:05.647 15730-15730 BufferQueueProducer     com.mynewapp                         D  [ImageReader-640x480f1m4-15730-2](id:3d7200000007,api:2,p:15730,c:15730) disconnect: api 2
+2026-04-24 20:40:05.653 15730-16713 UseCaseAttachState      com.mynewapp                         D  Active and attached use case: [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] for camera: 1
+2026-04-24 20:40:05.655 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} CameraDevice.onOpened()
+2026-04-24 20:40:05.655 15730-16713 Camera2CameraImpl       com.mynewapp                         D  {Camera@d116286[id=1]} Transitioning camera internal state: OPENING --> OPENED
+2026-04-24 20:40:05.655 15730-16713 CameraStateRegistry     com.mynewapp                         D  Recalculating open cameras:
+                                                                                                    Camera                                       State                 
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Camera@d116286[id=1]                         OPEN                  
+                                                                                                    Camera@291ad4f[id=0]                         UNKNOWN               
+                                                                                                    -------------------------------------------------------------------
+                                                                                                    Open count: 1 (Max allowed: 1)
+2026-04-24 20:40:05.655 15730-16713 CameraStateMachine      com.mynewapp                         D  New public camera state CameraState{type=OPEN, error=null} from OPEN and null
+2026-04-24 20:40:05.655 15730-16713 CameraStateMachine      com.mynewapp                         D  Publishing new public camera state CameraState{type=OPEN, error=null}
+2026-04-24 20:40:05.655 15730-15730 DeepARVideoCapturer     com.mynewapp                         D  frameAvailable #1 from DeepAR: 640x480 format=1
+2026-04-24 20:40:05.655 15730-15730 ASHISH                  com.mynewapp                         D  frameAvailable #1 from DeepAR: 640x480 format=1
+2026-04-24 20:40:05.655 15730-16713 UseCaseAttachState      com.mynewapp                         D  All use case: [androidx.camera.core.ImageAnalysis-340fe7fb-87b1-4e62-8c79-b7f4e52b6383204930166] for camera: 1
+2026-04-24 20:40:05.656 15730-16713 SyncCaptureSessionBase  com.mynewapp                         D  [androidx.camera.camera2.internal.SynchronizedCaptureSessionBaseImpl@c062280] getSurface...done
+2026-04-24 20:40:05.656 15730-16713 CaptureSession          com.mynewapp                         D  Opening capture session.
+2026-04-24 20:40:05.657 15730-16713 DeferrableSurface       com.mynewapp                         D  New surface in use[total_surfaces=1, used_surfaces=1](androidx.camera.core.impl.ImmediateSurface@8f49ee4}
+2026-04-24 20:40:05.657 15730-16713 DeferrableSurface       com.mynewapp                         D  use count+1, useCount=1 androidx.camera.core.impl.ImmediateSurface@8f49ee4
+2026-04-24 20:40:05.694 15730-17112 ASHISH                  com.mynewapp                         D  effectSwitched: effect
+2026-04-24 20:40:05.694 15730-17112 DeepARVideoCapturer     com.mynewapp                         D  effectSwitched: effect
+2026-04-24 20:40:05.696 15730-15730 org.webrtc.Logging      com.mynewapp                         I  SurfaceEglRenderer: : Reporting first rendered frame.
+2026-04-24 20:40:05.697 15730-15730 org.webrtc.Logging      com.mynewapp                         I  SurfaceEglRenderer: : Reporting frame resolution changed to 640x480 with rotation 0
+2026-04-24 20:40:05.737 15730-16713 CaptureSession          com.mynewapp                         D  Attempting to send capture request onConfigured
+2026-04-24 20:40:05.737 15730-16713 CaptureSession          com.mynewapp                         D  Issuing request for session.
+2026-04-24 20:40:05.737 15730-16713 Camera2Cap...estBuilder com.mynewapp                         D  createCaptureRequest
+2026-04-24 20:40:05.740 15730-15730 com.oney.W...bRTCModule com.mynewapp                         D  First frame rendered.
+2026-04-24 20:40:05.748 15730-16713 CaptureSession          com.mynewapp                         D  CameraCaptureSession.onConfigured() mState=OPENED
+2026-04-24 20:40:05.751 15730-16713 CaptureSession          com.mynewapp                         D  CameraCaptureSession.onReady() OPENED
+2026-04-24 20:40:06.035 15730-15738 System                  com.mynewapp                         W  A resource failed to call Surface.release. 
+2026-04-24 20:40:06.057 15730-17103 ASHISH                  com.mynewapp                         D  onCameraImage strides width=640 height=480 rowStride=2560 pixelStride=4
+2026-04-24 20:40:06.059 15730-17103 DeepARVideoCapturer     com.mynewapp                         D  onCameraImage #1 size=640x480 rotation=270
+2026-04-24 20:40:06.059 15730-17103 DeepARZoom              com.mynewapp                         D  camera->deepar frame#=1 in=640x480 render=640x480 inAspect=1.3333333333333333 renderAspect=1.3333333333333333 estCropW%=0.0 estCropH%=0.0 rotation=270 mirror=false inRowStride=2560 deepARRowStride=2560

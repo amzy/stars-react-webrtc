@@ -1,3 +1,25 @@
+/**
+ * Switches the DeepAR effect for a given video track.
+ * @param trackId The id of the video track.
+ * @param effectPath The path to the new DeepAR effect.
+ */
+const log = new Logger('switchDeepAREffect');
+export function switchDeepAREffect(trackId: string, effectPath: string) {
+    log.info(`[switchDeepAREffect] called: trackId=${trackId}, effectPath=${effectPath}`);
+    if (WebRTCModule && typeof WebRTCModule.switchDeepAREffect === 'function') {
+        try {
+            log.info(`[switchDeepAREffect] invoking WebRTCModule.switchDeepAREffect: trackId=${trackId}, effectPath=${effectPath}`);
+            WebRTCModule.switchDeepAREffect(trackId, effectPath);
+            log.info('[switchDeepAREffect] WebRTCModule.switchDeepAREffect call finished');
+        } catch (err) {
+            log.error('[switchDeepAREffect] Exception during WebRTCModule.switchDeepAREffect');
+            throw err;
+        }
+    } else {
+        log.error('[switchDeepAREffect] WebRTCModule.switchDeepAREffect is not available', new Error('WebRTCModule.switchDeepAREffect is not available'));
+        throw new Error('WebRTCModule.switchDeepAREffect is not available');
+    }
+}
 import { NativeModules, Platform } from 'react-native';
 const { WebRTCModule } = NativeModules;
 
